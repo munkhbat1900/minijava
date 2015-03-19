@@ -62,9 +62,10 @@ public class TypeCheckerVisitor implements TypeVisitor {
 
 	@Override
 	public Type visit(MainClass n) {
-		//		n.i1.accept(this);
 		currentClass = symbolTable.getClass(n.i1.s);
-		//		n.i2.accept(this);
+		if (currentClass == null) {
+			error.add("there is no such class : " + n.i1.s);
+		}
 		n.s.accept(this);
 		return null;
 	}
@@ -357,6 +358,9 @@ public class TypeCheckerVisitor implements TypeVisitor {
 			if (method != null) {
 				return method;
 			}
+			if (tmpClass.parent() == null) {
+				return null;
+			}
 			tmpClass = symbolTable.getClass(tmpClass.parent());
 		}
 		return null;
@@ -373,7 +377,7 @@ public class TypeCheckerVisitor implements TypeVisitor {
 		}
 
 		if (objectType == null) {
-			error.add("object is not declared in method call expression");
+			error.add("object used in method call expression is not declared ");
 			return null;
 		}
 
@@ -381,7 +385,8 @@ public class TypeCheckerVisitor implements TypeVisitor {
 		Method method = getMethodIncludingSubType(clas, n.i.s);
 		
 		if (method == null) {
-			error.add("there is no such method in " + objectType.s + "." + n.i.s);
+			error.add("there is no such method" + objectType.s + "." + n.i.s);
+			return null;
 		}
 
 		if (n.el.size() != method.params.size()) {

@@ -26,6 +26,12 @@ public class SymbolTable {
 		return true;	    
 	}
 
+	
+	/**
+	 * gets class declaration
+	 * @param id
+	 * @return
+	 */
 	public Class getClass(String id) {
 		if(containsClass(id)) 
 			return (Class)hashtable.get(id);	    
@@ -33,7 +39,7 @@ public class SymbolTable {
 			return null;
 	}
 
-	public boolean containsClass(String id) {
+	private boolean containsClass(String id) {
 		return hashtable.containsKey(id);
 	}
 
