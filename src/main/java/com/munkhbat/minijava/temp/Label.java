@@ -2,6 +2,11 @@ package com.munkhbat.minijava.temp;
 
 import com.munkhbat.minijava.typecheck.Symbol;
 
+/**
+ * @author munkhbat
+ * label represents location whose exact address yet to be determined. 
+ * it is like label in assembly language
+ */
 public class Label {
 	private String name;
 	private static int count;

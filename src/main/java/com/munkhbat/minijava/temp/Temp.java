@@ -1,5 +1,9 @@
 package com.munkhbat.minijava.temp;
 
+/**
+ * @author munkhbat
+ * represents register
+ */
 public class Temp {
 	private static int count;
 	private int num;
