@@ -1,6 +1,6 @@
-package com.munkhbat.minijava.tree;
+package com.munkhbat.minijava.tree.exp;
 
-import com.munkhbat.minijava.tree.exp.Exp;
+import com.munkhbat.minijava.tree.stm.Stm;
 
 public class ESEQ extends Exp {
   public Stm stm;

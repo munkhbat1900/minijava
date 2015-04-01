@@ -1,8 +1,10 @@
-package com.munkhbat.minijava.tree;
+package com.munkhbat.minijava.tree.stm;
 
 import com.munkhbat.minijava.temp.Label;
 import com.munkhbat.minijava.temp.LabelList;
 import com.munkhbat.minijava.tree.exp.Exp;
+import com.munkhbat.minijava.tree.exp.ExpList;
+import com.munkhbat.minijava.tree.exp.NAME;
 
 public class JUMP extends Stm {
 	public Exp exp;

@@ -1,4 +1,4 @@
-package com.munkhbat.minijava.tree;
+package com.munkhbat.minijava.tree.stm;
 
 public class StmList {
   public Stm head;

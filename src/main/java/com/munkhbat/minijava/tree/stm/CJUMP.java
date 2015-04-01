@@ -1,7 +1,8 @@
-package com.munkhbat.minijava.tree;
+package com.munkhbat.minijava.tree.stm;
 
 import com.munkhbat.minijava.temp.Label;
 import com.munkhbat.minijava.tree.exp.Exp;
+import com.munkhbat.minijava.tree.exp.ExpList;
 
 public class CJUMP extends Stm {
 	public int relop;

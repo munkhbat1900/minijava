@@ -2,7 +2,22 @@ package com.munkhbat.minijava.tree;
 
 import com.munkhbat.minijava.temp.DefaultMap;
 import com.munkhbat.minijava.temp.TempMap;
+import com.munkhbat.minijava.tree.exp.BINOP;
+import com.munkhbat.minijava.tree.exp.CALL;
+import com.munkhbat.minijava.tree.exp.CONST;
+import com.munkhbat.minijava.tree.exp.ESEQ;
 import com.munkhbat.minijava.tree.exp.Exp;
+import com.munkhbat.minijava.tree.exp.ExpList;
+import com.munkhbat.minijava.tree.exp.MEM;
+import com.munkhbat.minijava.tree.exp.NAME;
+import com.munkhbat.minijava.tree.exp.TEMP;
+import com.munkhbat.minijava.tree.stm.CJUMP;
+import com.munkhbat.minijava.tree.stm.EXP;
+import com.munkhbat.minijava.tree.stm.JUMP;
+import com.munkhbat.minijava.tree.stm.LABEL;
+import com.munkhbat.minijava.tree.stm.MOVE;
+import com.munkhbat.minijava.tree.stm.SEQ;
+import com.munkhbat.minijava.tree.stm.Stm;
 
 public class Print {
 

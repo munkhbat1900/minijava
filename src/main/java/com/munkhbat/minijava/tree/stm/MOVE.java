@@ -1,6 +1,8 @@
-package com.munkhbat.minijava.tree;
+package com.munkhbat.minijava.tree.stm;
 
 import com.munkhbat.minijava.tree.exp.Exp;
+import com.munkhbat.minijava.tree.exp.ExpList;
+import com.munkhbat.minijava.tree.exp.MEM;
 
 public class MOVE extends Stm {
 	public Exp dst, src;

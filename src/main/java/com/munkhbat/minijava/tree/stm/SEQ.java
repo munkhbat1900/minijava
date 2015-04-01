@@ -1,4 +1,6 @@
-package com.munkhbat.minijava.tree;
+package com.munkhbat.minijava.tree.stm;
+
+import com.munkhbat.minijava.tree.exp.ExpList;
 
 public class SEQ extends Stm {
   public Stm left, right;

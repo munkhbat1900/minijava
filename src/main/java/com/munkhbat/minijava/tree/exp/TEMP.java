@@ -1,7 +1,6 @@
-package com.munkhbat.minijava.tree;
+package com.munkhbat.minijava.tree.exp;
 
 import com.munkhbat.minijava.temp.Temp;
-import com.munkhbat.minijava.tree.exp.Exp;
 
 public class TEMP extends Exp {
 	public Temp temp;
