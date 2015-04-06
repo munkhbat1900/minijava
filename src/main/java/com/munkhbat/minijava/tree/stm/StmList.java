@@ -1,9 +1,9 @@
 package com.munkhbat.minijava.tree.stm;
 
 public class StmList {
-  public Stm head;
+  public IRStm head;
   public StmList tail;
-  public StmList(Stm h, StmList t) {head=h; tail=t;}
+  public StmList(IRStm h, StmList t) {head=h; tail=t;}
 }
 
 

@@ -4,21 +4,21 @@ import java.util.ArrayList;
 
 
 public class MethodDeclList {
-   private ArrayList<MethodDecl> list;
+	private ArrayList<MethodDecl> list;
 
-   public MethodDeclList() {
-      list = new ArrayList<MethodDecl>();
-   }
+	public MethodDeclList() {
+		list = new ArrayList<MethodDecl>();
+	}
 
-   public void addElement(MethodDecl n) {
-      list.add(n);
-   }
+	public void addElement(MethodDecl n) {
+		list.add(n);
+	}
 
-   public MethodDecl elementAt(int i)  { 
-      return list.get(i);
-   }
+	public MethodDecl elementAt(int i)  { 
+		return list.get(i);
+	}
 
-   public int size() { 
-      return list.size(); 
-   }
+	public int size() { 
+		return list.size(); 
+	}
 }

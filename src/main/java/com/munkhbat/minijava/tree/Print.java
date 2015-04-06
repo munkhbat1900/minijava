@@ -6,8 +6,8 @@ import com.munkhbat.minijava.tree.exp.BINOP;
 import com.munkhbat.minijava.tree.exp.CALL;
 import com.munkhbat.minijava.tree.exp.CONST;
 import com.munkhbat.minijava.tree.exp.ESEQ;
-import com.munkhbat.minijava.tree.exp.Exp;
-import com.munkhbat.minijava.tree.exp.ExpList;
+import com.munkhbat.minijava.tree.exp.IRExp;
+import com.munkhbat.minijava.tree.exp.IRExpList;
 import com.munkhbat.minijava.tree.exp.MEM;
 import com.munkhbat.minijava.tree.exp.NAME;
 import com.munkhbat.minijava.tree.exp.TEMP;
@@ -17,7 +17,7 @@ import com.munkhbat.minijava.tree.stm.JUMP;
 import com.munkhbat.minijava.tree.stm.LABEL;
 import com.munkhbat.minijava.tree.stm.MOVE;
 import com.munkhbat.minijava.tree.stm.SEQ;
-import com.munkhbat.minijava.tree.stm.Stm;
+import com.munkhbat.minijava.tree.stm.IRStm;
 
 public class Print {
 
@@ -85,7 +85,7 @@ public class Print {
 		indent(d); sayln("EXP("); prExp(s.exp,d+1); say(")"); 
 	}
 
-	void prStm(Stm s, int d) {
+	void prStm(IRStm s, int d) {
 		if (s instanceof SEQ) prStm((SEQ)s, d);
 		else if (s instanceof LABEL) prStm((LABEL)s, d);
 		else if (s instanceof JUMP) prStm((JUMP)s, d);
@@ -142,13 +142,13 @@ public class Print {
 	void prExp(CALL e, int d) {
 		indent(d); sayln("CALL(");
 		prExp(e.func,d+1);
-		for(ExpList a = e.args; a!=null; a=a.tail) {
+		for(IRExpList a = e.args; a!=null; a=a.tail) {
 			sayln(","); prExp(a.head,d+2); 
 		}
 		say(")");
 	}
 
-	void prExp(Exp e, int d) {
+	void prExp(IRExp e, int d) {
 		if (e instanceof BINOP) prExp((BINOP)e, d);
 		else if (e instanceof MEM) prExp((MEM)e, d);
 		else if (e instanceof TEMP) prExp((TEMP)e, d);
@@ -159,7 +159,7 @@ public class Print {
 		else throw new Error("Print.prExp");
 	}
 
-	public void prStm(Stm s) {prStm(s,0); say("\n");}
-	public void prExp(Exp e) {prExp(e,0); say("\n");}
+	public void prStm(IRStm s) {prStm(s,0); say("\n");}
+	public void prExp(IRExp e) {prExp(e,0); say("\n");}
 
 }

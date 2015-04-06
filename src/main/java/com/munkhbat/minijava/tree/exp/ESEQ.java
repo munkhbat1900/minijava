@@ -1,12 +1,12 @@
 package com.munkhbat.minijava.tree.exp;
 
-import com.munkhbat.minijava.tree.stm.Stm;
+import com.munkhbat.minijava.tree.stm.IRStm;
 
-public class ESEQ extends Exp {
-  public Stm stm;
-  public Exp exp;
-  public ESEQ(Stm s, Exp e) {stm=s; exp=e;}
-  public ExpList kids() {throw new Error("kids() not applicable to ESEQ");}
-  public Exp build(ExpList kids) {throw new Error("build() not applicable to ESEQ");}
+public class ESEQ extends IRExp {
+  public IRStm stm;
+  public IRExp exp;
+  public ESEQ(IRStm s, IRExp e) {stm=s; exp=e;}
+  public IRExpList kids() {throw new Error("kids() not applicable to ESEQ");}
+  public IRExp build(IRExpList kids) {throw new Error("build() not applicable to ESEQ");}
 }
 

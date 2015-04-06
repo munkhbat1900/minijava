@@ -1,13 +1,13 @@
 package com.munkhbat.minijava.tree.stm;
 
 import com.munkhbat.minijava.temp.Label;
-import com.munkhbat.minijava.tree.exp.ExpList;
+import com.munkhbat.minijava.tree.exp.IRExpList;
 
-public class LABEL extends Stm { 
+public class LABEL extends IRStm { 
   public Label label;
   public LABEL(Label l) {label=l;}
-  public ExpList kids() {return null;}
-  public Stm build(ExpList kids) {
+  public IRExpList kids() {return null;}
+  public IRStm build(IRExpList kids) {
     return this;
   }
 }

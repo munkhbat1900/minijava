@@ -1,11 +1,11 @@
 package com.munkhbat.minijava.tree.stm;
 
-import com.munkhbat.minijava.tree.exp.ExpList;
+import com.munkhbat.minijava.tree.exp.IRExpList;
 
-public class SEQ extends Stm {
-  public Stm left, right;
-  public SEQ(Stm l, Stm r) { left=l; right=r; }
-  public ExpList kids() {throw new Error("kids() not applicable to SEQ");}
-  public Stm build(ExpList kids) {throw new Error("build() not applicable to SEQ");}
+public class SEQ extends IRStm {
+  public IRStm left, right;
+  public SEQ(IRStm l, IRStm r) { left=l; right=r; }
+  public IRExpList kids() {throw new Error("kids() not applicable to SEQ");}
+  public IRStm build(IRExpList kids) {throw new Error("build() not applicable to SEQ");}
 }
 

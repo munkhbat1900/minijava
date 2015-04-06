@@ -1,18 +1,18 @@
 package com.munkhbat.minijava.tree.stm;
 
-import com.munkhbat.minijava.tree.exp.Exp;
-import com.munkhbat.minijava.tree.exp.ExpList;
+import com.munkhbat.minijava.tree.exp.IRExp;
+import com.munkhbat.minijava.tree.exp.IRExpList;
 import com.munkhbat.minijava.tree.exp.MEM;
 
-public class MOVE extends Stm {
-	public Exp dst, src;
-	public MOVE(Exp d, Exp s) {dst=d; src=s;}
-	public ExpList kids() {
+public class MOVE extends IRStm {
+	public IRExp dst, src;
+	public MOVE(IRExp d, IRExp s) {dst=d; src=s;}
+	public IRExpList kids() {
 		if (dst instanceof MEM)
-			return new ExpList(((MEM)dst).exp, new ExpList(src,null));
-		else return new ExpList(src,null);
+			return new IRExpList(((MEM)dst).exp, new IRExpList(src,null));
+		else return new IRExpList(src,null);
 	}
-	public Stm build(ExpList kids) {
+	public IRStm build(IRExpList kids) {
 		if (dst instanceof MEM)
 			return new MOVE(new MEM(kids.head), kids.tail.head);
 		else return new MOVE(dst, kids.head);

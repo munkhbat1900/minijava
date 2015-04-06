@@ -1,14 +1,14 @@
 package com.munkhbat.minijava.tree.exp;
 
 
-public class CALL extends Exp {
-  public Exp func;
-  public ExpList args;
-  public CALL(Exp f, ExpList a) {func=f; args=a;}
-  public ExpList kids() {return new ExpList(func,args);}
-  public Exp build(ExpList kids) {
-    return new CALL(kids.head,kids.tail);
-  }
-  
+public class CALL extends IRExp {
+	public IRExp func;
+	public IRExpList args;
+	public CALL(IRExp f, IRExpList a) {func=f; args=a;}
+	public IRExpList kids() {return new IRExpList(func,args);}
+	public IRExp build(IRExpList kids) {
+		return new CALL(kids.head,kids.tail);
+	}
+
 }
 
