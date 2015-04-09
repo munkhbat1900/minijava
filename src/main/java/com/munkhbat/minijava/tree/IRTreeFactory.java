@@ -4,7 +4,7 @@ import com.munkhbat.minijava.temp.Label;
 import com.munkhbat.minijava.tree.exp.*;
 import com.munkhbat.minijava.tree.stm.*;
 
-public class IRHelper {
+public class IRTreeFactory {
 	public static IRExp TRUE = new CONST(1);
 	public static IRExp FALSE = new CONST(0);
 	
