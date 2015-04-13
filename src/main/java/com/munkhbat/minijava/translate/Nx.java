@@ -17,7 +17,6 @@ public class Nx extends Exp {
 	
 	@Override
 	IRExp unEx() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -28,7 +27,6 @@ public class Nx extends Exp {
 
 	@Override
 	IRStm unCx(Label t, Label f) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 

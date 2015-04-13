@@ -1,6 +1,12 @@
 package com.munkhbat.minijava.tree.exp;
 
 
+/**
+ * @author munkhbat
+ * The contents of wordSize bytes of memory starting at address e
+ * Note that when MEM is used as the left child of a MOVE,
+ * it means “store,” but anywhere else it means “fetch.”
+ */
 public class MEM extends IRExp {
 	public IRExp exp;
 	public MEM(IRExp e) {exp=e;}
